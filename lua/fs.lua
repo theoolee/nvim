@@ -21,8 +21,9 @@ vim.api.nvim_create_user_command('CwdFileChange',
           end
         end
       end)
-  end, {
-})
+  end,
+  {}
+)
 
 local function callback()
   if handle then

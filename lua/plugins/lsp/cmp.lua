@@ -39,7 +39,7 @@ cmp.setup {
   window = {
     completion = {
       border = 'single',
-      winhighlight = 'FloatBorder:FloatBorder,CursorLine:Visual',
+      winhighlight = 'FloatBorder:FloatBorder,CursorLine:CmpSelection',
     },
     documentation = {
       border = 'single',

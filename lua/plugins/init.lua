@@ -114,6 +114,7 @@ require 'plugins.which-key'
 require 'plugins.colorizer'
 require 'plugins.dressing'
 require 'plugins.gitsigns'
+require 'plugins.lazygit'
 
 require 'hop'.setup()
 require 'indent_blankline'.setup { show_current_context = true }
