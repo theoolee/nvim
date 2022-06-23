@@ -80,7 +80,7 @@ vim.keymap.set('n', '<s-l>', '<cmd>BufferLineCycleNext<cr>', { noremap = true, s
 vim.keymap.set({ '', 't' }, '<c-t>', require 'plugins.toggleterm'.toggle_term, { desc = 'Terminal' })
 vim.api.nvim_create_autocmd('TermOpen', {
   pattern = 'term://*toggleterm#*',
-  callback = function(arg)
+  callback = function()
     vim.opt.signcolumn = 'no'
     local opts = { noremap = true, buffer = true }
     vim.keymap.set('t', 'jk', [[<c-\><c-n>]], opts)
@@ -128,3 +128,12 @@ vim.keymap.set('n', '<leader>ld', require 'telescope.builtin'.diagnostics, { des
 vim.keymap.set('n', 'gl', vim.diagnostic.open_float, { desc = 'Line Diagnostic' })
 vim.keymap.set('n', 'gd', require 'telescope.builtin'.lsp_definitions, { desc = 'Definitions' })
 vim.keymap.set('n', 'gr', require 'telescope.builtin'.lsp_references, { desc = 'References' })
+
+
+-- Copilot
+vim.keymap.set('i', '<c-h>', '<nop>')
+vim.keymap.set('i', '<c-j>', '<nop>')
+vim.keymap.set('i', '<c-k>', '<nop>')
+vim.keymap.set('i', '<c-l>', '<nop>')
+vim.keymap.set('i', '<c-l>', [[copilot#Accept('<cr>')]], { script = true, expr = true, silent = true })
+vim.g.copilot_no_tab_map = true

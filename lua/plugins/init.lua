@@ -78,6 +78,7 @@ packer.startup(
       requires = {
         'williamboman/nvim-lsp-installer',
         'jose-elias-alvarez/null-ls.nvim',
+        'github/copilot.vim',
         'RRethy/vim-illuminate',
         'j-hui/fidget.nvim',
         'stevearc/dressing.nvim',
@@ -100,7 +101,6 @@ packer.startup(
     }
   end
 )
-
 
 require 'plugins.theme'
 require 'plugins.lsp'
