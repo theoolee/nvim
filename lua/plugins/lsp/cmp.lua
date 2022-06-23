@@ -38,11 +38,11 @@ local keymap_opts = {
 cmp.setup {
   window = {
     completion = {
-      border = 'rounded',
+      border = 'single',
       winhighlight = 'FloatBorder:FloatBorder,CursorLine:Visual',
     },
     documentation = {
-      border = 'rounded',
+      border = 'single',
       winhighlight = 'FloatBorder:FloatBorder'
     }
   },

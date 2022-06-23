@@ -10,7 +10,7 @@ which_key.setup {
     ['<tab>'] = 'TAB'
   },
   window = {
-    border = 'rounded'
+    border = 'single'
   }
 }
 which_key.register({

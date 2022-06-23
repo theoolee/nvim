@@ -6,6 +6,6 @@ require 'gitsigns'.setup {
     delay = 0
   },
   preview_config = {
-    border = 'rounded'
+    border = 'single'
   }
 }

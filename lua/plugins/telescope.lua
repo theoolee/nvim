@@ -1,5 +1,6 @@
 require 'telescope'.setup {
   defaults = {
+    borderchars = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
     mappings = {
       i = {
         ['<c-j>'] = 'move_selection_next',
