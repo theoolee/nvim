@@ -8,7 +8,6 @@ require 'github-theme'.setup {
 }
 
 vim.highlight.create('CmpSelection', { guibg = '#163356' })
-vim.highlight.create('NvimTreeGitIgnored', { guifg = '#535962' })
 vim.highlight.create('NvimTreeIndentMarker', { guifg = '#262a33' })
 vim.highlight.create('IndentBlanklineChar', { guifg = '#262a33' })
 vim.highlight.create('IndentBlanklineContextChar', { guifg = '#383d45' })
