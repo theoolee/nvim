@@ -84,7 +84,6 @@ packer.startup(
         'ray-x/lsp_signature.nvim',
         'folke/lua-dev.nvim',
         'b0o/schemastore.nvim',
-        'github/copilot.vim',
         'hrsh7th/nvim-cmp',
         'hrsh7th/cmp-nvim-lsp',
         'hrsh7th/cmp-path',
