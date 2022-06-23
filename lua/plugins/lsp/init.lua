@@ -8,7 +8,7 @@ require 'luasnip'.filetype_extend('typescript', { 'javascript' })
 require 'luasnip'.filetype_extend('typescriptreact', { 'javascriptreact' })
 require 'lsp_signature'.setup {
   hint_enable = false,
-  timer_interval = 0,
+  timer_interval = 300,
   floating_window_above_cur_line = false
 }
 require 'fidget'.setup { text = { spinner = 'dots' } }
