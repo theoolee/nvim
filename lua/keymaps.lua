@@ -100,18 +100,7 @@ vim.keymap.set('n', '<leader>gj', require 'gitsigns'.next_hunk, { desc = 'Next H
 vim.keymap.set('n', '<leader>gk', require 'gitsigns'.prev_hunk, { desc = 'Previous Hunk' })
 
 -- Explorer
-vim.keymap.set(
-  'n',
-  '<leader>e',
-  function()
-    if vim.bo.filetype == 'NvimTree' then
-      vim.api.nvim_command 'NvimTreeClose'
-    else
-      vim.api.nvim_command 'NvimTreeOpen'
-    end
-  end,
-  { desc = 'Explorer' }
-)
+vim.keymap.set('n', '<leader>e', '<cmd>NvimTreeToggle<cr>', { desc = 'Explorer' })
 
 -- Telescope
 vim.keymap.set('n', '<leader>T', '<cmd>Telescope<cr>', { desc = 'Telescope' })
