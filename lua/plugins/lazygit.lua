@@ -21,23 +21,20 @@ require 'lazygit.window'.open_floating_window = function()
   local row = math.ceil(vim.o.lines - height) / 2
   local col = math.ceil(vim.o.columns - width) / 2
 
-  local border_opts = {
+  local opts = {
     style = 'minimal',
     relative = 'editor',
-    row = row - 1,
-    col = col - 1,
+    row = row,
+    col = col,
     width = width,
-    height = height,
-    border = 'single'
+    height = height
   }
-
-  local opts = { style = 'minimal', relative = 'editor', row = row, col = col, width = width, height = height }
 
   -- create a unlisted scratch buffer for the border
   local border_buffer = api.nvim_create_buf(false, true)
 
   -- create border window
-  local border_window = api.nvim_open_win(border_buffer, true, border_opts)
+  local border_window = api.nvim_open_win(border_buffer, true, opts)
   vim.cmd 'set winhl=Normal:Floating'
 
   -- create a unlisted scratch buffer
