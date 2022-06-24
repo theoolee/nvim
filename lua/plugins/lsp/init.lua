@@ -6,11 +6,11 @@ require 'luasnip.loaders.from_vscode'.lazy_load {
 }
 require 'luasnip'.filetype_extend('typescript', { 'javascript' })
 require 'luasnip'.filetype_extend('typescriptreact', { 'javascriptreact' })
-require 'lsp_signature'.setup {
-  hint_enable = false,
-  timer_interval = 300,
-  floating_window_above_cur_line = false
-}
+-- require 'lsp_signature'.setup {
+--   hint_enable = false,
+--   timer_interval = 300,
+--   floating_window_above_cur_line = false
+-- }
 require 'fidget'.setup { text = { spinner = 'dots' } }
 require 'ufo'.setup()
 

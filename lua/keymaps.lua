@@ -95,9 +95,8 @@ vim.api.nvim_create_autocmd('TermOpen', {
 -- Git
 vim.keymap.set('n', '<leader>gg', '<cmd>LazyGit<cr>', { desc = 'LazyGit' })
 vim.keymap.set('n', '<leader>gd', require 'gitsigns'.diffthis, { desc = 'Diff File' })
-vim.keymap.set('n', '<leader>gp', require 'gitsigns'.preview_hunk, { desc = 'Preview Hunk' })
-vim.keymap.set('n', '<leader>gj', require 'gitsigns'.next_hunk, { desc = 'Next Hunk' })
-vim.keymap.set('n', '<leader>gk', require 'gitsigns'.prev_hunk, { desc = 'Previous Hunk' })
+vim.keymap.set('n', '<leader>gj', require 'gitsigns'.next_hunk, { desc = 'Next Change' })
+vim.keymap.set('n', '<leader>gk', require 'gitsigns'.prev_hunk, { desc = 'Previous Change' })
 
 -- Explorer
 vim.keymap.set('n', '<leader>e', '<cmd>NvimTreeToggle<cr>', { desc = 'Explorer' })
