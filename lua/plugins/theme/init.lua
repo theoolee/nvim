@@ -1,18 +1,21 @@
 require 'plugins.theme.github'
 
+local open_win = vim.api.nvim_open_win
+
+vim.api.nvim_open_win = function(buf, enter, config)
+  config = config or {}
+  if config.border ~= nil and config.border ~= 'none' then
+    config.border = 'single'
+  end
+  return open_win(buf, enter, config)
+end
+
 vim.api.nvim_create_autocmd('FileType', {
   pattern = vim.tbl_filter(function(x) return x ~= 'TelescopePrompt' end, popup_filetypes),
   callback = function()
     vim.api.nvim_win_set_config(0, { border = 'single' })
   end
 })
-
-local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
-function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
-  opts = opts or {}
-  opts.border = 'single'
-  return orig_util_open_floating_preview(contents, syntax, opts, ...)
-end
 
 vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
