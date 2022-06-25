@@ -1,4 +1,6 @@
-require 'colorizer'.setup {
+local colorizer = require 'colorizer'
+
+colorizer.setup {
   ['*'] = {
     RGB = true,
     RRGGBB = true,
@@ -11,3 +13,8 @@ require 'colorizer'.setup {
     mode = 'background'
   }
 }
+
+vim.api.nvim_create_autocmd({ 'TextChanged', 'TextChangedI' }, {
+  pattern = '*',
+  callback = colorizer.reload_all_buffers
+})
