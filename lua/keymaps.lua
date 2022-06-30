@@ -130,9 +130,5 @@ vim.keymap.set('n', 'gr', require 'telescope.builtin'.lsp_references, { desc = '
 
 
 -- Copilot
-vim.keymap.set('i', '<c-h>', '<nop>')
-vim.keymap.set('i', '<c-j>', '<nop>')
-vim.keymap.set('i', '<c-k>', '<nop>')
-vim.keymap.set('i', '<c-l>', '<nop>')
 vim.keymap.set('i', '<c-l>', [[copilot#Accept('<cr>')]], { script = true, expr = true, silent = true })
 vim.g.copilot_no_tab_map = true

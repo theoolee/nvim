@@ -2,14 +2,10 @@ require 'telescope'.setup {
   defaults = {
     borderchars = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
     mappings = {
-      i = {
-        ['<c-j>'] = 'move_selection_next',
-        ['<c-k>'] = 'move_selection_previous'
-      },
       n = {
         ['q'] = 'close',
-        ['<c-j>'] = 'cycle_history_next',
-        ['<c-k>'] = 'cycle_history_prev'
+        ['<c-n>'] = 'cycle_history_next',
+        ['<c-p>'] = 'cycle_history_prev'
       }
     }
   },

@@ -99,8 +99,8 @@ cmp.setup {
         fallback()
       end
     end, keymap_opts),
-    ['<c-j>'] = cmp.mapping(cmp.mapping.select_next_item { behavior = cmp.SelectBehavior.Select }, keymap_opts),
-    ['<c-k>'] = cmp.mapping(cmp.mapping.select_prev_item { behavior = cmp.SelectBehavior.Select }, keymap_opts),
+    ['<c-n>'] = cmp.mapping(cmp.mapping.select_next_item { behavior = cmp.SelectBehavior.Select }, keymap_opts),
+    ['<c-p>'] = cmp.mapping(cmp.mapping.select_prev_item { behavior = cmp.SelectBehavior.Select }, keymap_opts),
     ['<c-u>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), keymap_opts),
     ['<c-d>'] = cmp.mapping(cmp.mapping.scroll_docs(4), keymap_opts)
   }
