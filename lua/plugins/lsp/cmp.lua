@@ -46,9 +46,6 @@ cmp.setup {
       winhighlight = 'FloatBorder:FloatBorder'
     }
   },
-  completion = {
-    completeopt = 'menuone'
-  },
   formatting = {
     format = function(_, vim_item)
       vim_item.kind = (cmp_kinds[vim_item.kind] or '') .. ' ' .. vim_item.kind
