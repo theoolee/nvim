@@ -63,7 +63,7 @@ cmp.setup {
     { name = 'luasnip' },
     { name = 'buffer' }
   },
-  mapping = cmp.mapping.preset.insert {
+  mapping = {
     ['<c-space>'] = cmp.mapping(function()
       if cmp.visible() then
         cmp.close()
