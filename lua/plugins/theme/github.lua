@@ -8,8 +8,8 @@ require 'github-theme'.setup {
   hide_end_of_buffer = false
 }
 
-vim.highlight.create('CmpSelection', { guibg = '#2d3139' })
-vim.highlight.create('NvimTreeIndentMarker', { guifg = '#262a33' })
-vim.highlight.create('IndentBlanklineChar', { guifg = '#262a33' })
-vim.highlight.create('IndentBlanklineContextChar', { guifg = '#383d45' })
-vim.highlight.create('LspSignatureActiveParameter', { guifg = '#77acf9' })
+vim.api.nvim_set_hl(0, 'CmpSelection', { bg = '#2d3139' })
+vim.api.nvim_set_hl(0, 'NvimTreeIndentMarker', { fg = '#262a33' })
+vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = '#262a33' })
+vim.api.nvim_set_hl(0, 'IndentBlanklineContextChar', { fg = '#383d45' })
+vim.api.nvim_set_hl(0, 'LspSignatureActiveParameter', { fg = '#77acf9' })
