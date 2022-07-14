@@ -1,19 +1,19 @@
 require 'bufferline'.setup {
   options = {
-    offsets = {
-      {
-        filetype = 'NvimTree',
-        text = 'Explorer',
-        highlight = 'PanelHeading',
-        padding = 1
-      },
-      {
-        filetype = 'toggleterm',
-        text = 'Terminal',
-        highlight = 'PanelHeading',
-        padding = 1
-      }
-    },
+    -- offsets = {
+    --   {
+    --     filetype = 'NvimTree',
+    --     text = 'Explorer',
+    --     highlight = 'PanelHeading',
+    --     padding = 1
+    --   },
+    --   {
+    --     filetype = 'toggleterm',
+    --     text = 'Terminal',
+    --     highlight = 'PanelHeading',
+    --     padding = 1
+    --   }
+    -- },
     diagnostics = 'nvim_lsp',
     diagnostics_indicator = function(_, _, diagnostics_dict, _)
       local s = ''
