@@ -11,5 +11,4 @@ require 'github-theme'.setup {
 vim.api.nvim_set_hl(0, 'CmpSelection', { bg = '#2d3139' })
 vim.api.nvim_set_hl(0, 'NvimTreeIndentMarker', { fg = '#262a33' })
 vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = '#262a33' })
-vim.api.nvim_set_hl(0, 'IndentBlanklineContextChar', { fg = '#383d45' })
 vim.api.nvim_set_hl(0, 'LspSignatureActiveParameter', { fg = '#77acf9' })

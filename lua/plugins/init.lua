@@ -117,5 +117,5 @@ require 'plugins.gitsigns'
 require 'plugins.lazygit'
 
 require 'hop'.setup()
-require 'indent_blankline'.setup { show_current_context = true }
+require 'indent_blankline'.setup { show_current_context = true, show_current_context_start = true }
 require 'auto-session'.setup { auto_session_enable_last_session = true }
