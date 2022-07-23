@@ -4,7 +4,6 @@ local lsp_installer = require 'nvim-lsp-installer'
 
 lsp_installer.setup {
   ensure_installed = {
-    'sumneko_lua',
     'bashls',
     'clangd',
     'cssls',
@@ -14,9 +13,11 @@ lsp_installer.setup {
     'eslint',
     'gopls',
     'html',
+    'jdtls',
     'jsonls',
     'pyright',
     'rust_analyzer',
+    'sumneko_lua',
     'taplo',
     'tsserver',
     'volar',
