@@ -7,7 +7,7 @@ require 'nvim-tree'.setup {
   update_cwd = true,
   filesystem_watchers = {
     enable = true,
-    debounce_delay = 1000
+    debounce_delay = 100
   },
   diagnostics = {
     enable = true,

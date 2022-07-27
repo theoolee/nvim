@@ -10,7 +10,7 @@ vim.api.nvim_create_user_command('CwdFileChange',
     end
     update_id = _update_id
     local timer
-    timer = vim.fn.timer_start(1000,
+    timer = vim.fn.timer_start(100,
       function()
         vim.fn.timer_stop(timer)
         if _update_id == update_id then
