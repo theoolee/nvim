@@ -34,7 +34,7 @@ require 'toggleterm'.setup {
       return 80
     end
   end,
-  direction = 'vertical',
+  direction = 'horizontal',
   highlights = {
     Normal = {
       guibg = require 'github-theme.palette.dark_default' ().bg2
