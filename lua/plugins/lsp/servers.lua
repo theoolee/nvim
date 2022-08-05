@@ -7,6 +7,7 @@ lsp_installer.setup {
     'bashls',
     'clangd',
     'cssls',
+    'cssmodules_ls',
     'dartls',
     'dockerls',
     'emmet_ls',
