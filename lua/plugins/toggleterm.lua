@@ -29,9 +29,9 @@ end
 require 'toggleterm'.setup {
   size = function(term)
     if term.direction == 'horizontal' then
-      return 20
+      return 15
     elseif term.direction == 'vertical' then
-      return 80
+      return 60
     end
   end,
   direction = 'horizontal',
