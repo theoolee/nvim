@@ -23,7 +23,7 @@ require 'nvim-tree'.setup {
     ignore = false
   },
   view = {
-    width = 40,
+    adaptive_size = true,
     hide_root_folder = true,
     mappings = {
       list = {
@@ -42,6 +42,9 @@ require 'nvim-tree'.setup {
           end
         }
       }
+    },
+    float = {
+      enable = true
     }
   },
   renderer = {
