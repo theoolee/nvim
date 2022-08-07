@@ -77,7 +77,7 @@ vim.keymap.set('n', '<s-h>', '<cmd>BufferLineCyclePrev<cr>', { noremap = true, s
 vim.keymap.set('n', '<s-l>', '<cmd>BufferLineCycleNext<cr>', { noremap = true, silent = true })
 
 -- Terminal
-vim.keymap.set({ '', 't' }, '<c-t>', require 'plugins.toggleterm'.toggle_term, { desc = 'Terminal' })
+vim.keymap.set({ '', 't' }, '<c-t>', '<cmd>ToggleTerm<cr>', { desc = 'Terminal' })
 vim.api.nvim_create_autocmd('TermOpen', {
   pattern = 'term://*toggleterm#*',
   callback = function()

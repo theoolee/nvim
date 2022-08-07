@@ -15,26 +15,7 @@ function M.new_term(dir)
   end
 end
 
-function M.toggle_term()
-  local terms = require 'toggleterm.terminal'.get_all()
-  if vim.v.count ~= 0 then
-    require 'toggleterm'.toggle(vim.v.count)
-  elseif #terms > 0 then
-    require 'toggleterm'.toggle_all()
-  else
-    M.new_term()
-  end
-end
-
 require 'toggleterm'.setup {
-  size = function(term)
-    if term.direction == 'horizontal' then
-      return 15
-    elseif term.direction == 'vertical' then
-      return 60
-    end
-  end,
-  direction = 'horizontal',
   highlights = {
     Normal = {
       guibg = require 'github-theme.palette.dark_default' ().bg2
