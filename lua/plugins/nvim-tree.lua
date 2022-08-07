@@ -42,9 +42,6 @@ require 'nvim-tree'.setup {
           end
         }
       }
-    },
-    float = {
-      enable = true
     }
   },
   renderer = {
