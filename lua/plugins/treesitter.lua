@@ -36,7 +36,8 @@ ts_configs.setup {
     enable = true
   },
   rainbow = {
-    enable = true
+    enable = true,
+    extended_mode = false
   },
   textobjects = {
     select = {
