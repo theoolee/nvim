@@ -127,8 +127,3 @@ vim.keymap.set('n', '<leader>ld', require 'telescope.builtin'.diagnostics, { des
 vim.keymap.set('n', 'gl', vim.diagnostic.open_float, { desc = 'Line Diagnostic' })
 vim.keymap.set('n', 'gd', require 'telescope.builtin'.lsp_definitions, { desc = 'Definitions' })
 vim.keymap.set('n', 'gr', require 'telescope.builtin'.lsp_references, { desc = 'References' })
-
-
--- Copilot
-vim.keymap.set('i', '<c-l>', [[copilot#Accept('<cr>')]], { script = true, expr = true, silent = true })
-vim.g.copilot_no_tab_map = true
