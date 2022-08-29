@@ -35,7 +35,7 @@ require 'nvim-tree'.setup {
         { key = '<', action = '', },
         { key = '>', action = '', },
         {
-          key = '<c-t>',
+          key = 't',
           action = 'open_in_term',
           action_cb = function(node)
             require 'plugins.toggleterm'.new_term(node.absolute_path)
