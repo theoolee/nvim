@@ -57,20 +57,18 @@ vim.keymap.set(
 )
 
 -- Comment
-vim.keymap.set('n', '<leader>/', require 'Comment.api'.toggle_current_linewise, { desc = 'Comment Line' })
-vim.keymap.set('n', '<leader>?', require 'Comment.api'.toggle_current_blockwise, { desc = 'Comment Block' })
-vim.keymap.set(
-  'v',
-  '<leader>/',
-  '<esc><cmd>lua require"Comment.api".toggle_linewise_op(vim.fn.visualmode())<cr>',
-  { desc = 'Comment Line' }
-)
-vim.keymap.set(
-  'v',
-  '<leader>?',
-  '<esc><cmd>lua require"Comment.api".toggle_blockwise_op(vim.fn.visualmode())<cr>',
-  { desc = 'Comment Block' }
-)
+local esc = vim.api.nvim_replace_termcodes('<esc>', true, false, true)
+
+vim.keymap.set('n', '<leader>/', require 'Comment.api'.toggle.linewise.current, { desc = 'Comment Line' })
+vim.keymap.set('n', '<leader>?', require 'Comment.api'.toggle.blockwise.current, { desc = 'Comment Block' })
+vim.keymap.set('x', '<leader>/', function()
+  vim.api.nvim_feedkeys(esc, 'nx', false)
+  require 'Comment.api'.toggle.linewise(vim.fn.visualmode())
+end)
+vim.keymap.set('x', '<leader>?', function()
+  vim.api.nvim_feedkeys(esc, 'nx', false)
+  require 'Comment.api'.toggle.blockwise(vim.fn.visualmode())
+end)
 
 -- Buffer
 vim.keymap.set('n', '<s-h>', '<cmd>BufferLineCyclePrev<cr>', { noremap = true, silent = true })
