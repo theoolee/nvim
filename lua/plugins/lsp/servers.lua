@@ -23,7 +23,6 @@ lsp_installer.setup {
     'sumneko_lua',
     'taplo',
     'tsserver',
-    'vuels',
     'yamlls',
     'zk'
   },
@@ -56,26 +55,6 @@ local function is_vue_project(path)
   end
 end
 
-local function is_typescript_project(path)
-  local package_json = file_utils.read_json(path .. path_separator .. 'package.json')
-  if package_json then
-    return (package_json.dependencies and package_json.dependencies.typescript) or
-        (package_json.devDependencies and package_json.devDependencies.typescript)
-  end
-end
-
-local function is_volar_project(path)
-  if is_typescript_project(path) and is_vue_project(path) then
-    return true
-  end
-end
-
-local function is_vetur_project(path)
-  if not is_typescript_project(path) then
-    return true
-  end
-end
-
 local configs = {
   eslint = {
     root_dir = function(fname)
@@ -88,7 +67,7 @@ local configs = {
   tsserver = {
     root_dir = function(fname)
       local dir = lspconfig.util.find_package_json_ancestor(fname)
-      if not is_volar_project(dir) then
+      if not is_vue_project(dir) then
         return dir
       end
     end
@@ -103,18 +82,7 @@ local configs = {
     },
     root_dir = function(fname)
       local dir = lspconfig.util.find_package_json_ancestor(fname)
-      if is_volar_project(dir) then
-        return dir
-      end
-    end
-  },
-  vuels = {
-    filetypes = {
-      'vue'
-    },
-    root_dir = function(fname)
-      local dir = lspconfig.util.find_node_modules_ancestor(fname)
-      if is_vetur_project(dir) then
+      if is_vue_project(dir) then
         return dir
       end
     end
