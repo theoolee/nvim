@@ -57,25 +57,24 @@ vim.keymap.set(
 )
 
 -- Comment
-local esc = vim.api.nvim_replace_termcodes('<esc>', true, false, true)
-
 vim.keymap.set('n', '<leader>/', require 'Comment.api'.toggle.linewise.current, { desc = 'Comment Line' })
 vim.keymap.set('n', '<leader>?', require 'Comment.api'.toggle.blockwise.current, { desc = 'Comment Block' })
 vim.keymap.set('x', '<leader>/', function()
-  vim.api.nvim_feedkeys(esc, 'nx', false)
+  vim.api.nvim_feedkeys('<esc>', 'nx', false)
   require 'Comment.api'.toggle.linewise(vim.fn.visualmode())
-end)
+end, {})
 vim.keymap.set('x', '<leader>?', function()
-  vim.api.nvim_feedkeys(esc, 'nx', false)
+  vim.api.nvim_feedkeys('<esc>', 'nx', false)
   require 'Comment.api'.toggle.blockwise(vim.fn.visualmode())
-end)
+end, {})
 
 -- Buffer
 vim.keymap.set('n', '<s-h>', '<cmd>BufferLineCyclePrev<cr>', { noremap = true, silent = true })
 vim.keymap.set('n', '<s-l>', '<cmd>BufferLineCycleNext<cr>', { noremap = true, silent = true })
 
 -- Terminal
-vim.keymap.set({ '', 't' }, '<c-t>', '<cmd>ToggleTerm<cr>', { desc = 'Terminal' })
+vim.keymap.set({ '', 't' }, '<c-t>', '<cmd>exe v:count1 . "ToggleTerm"<cr>', { desc = 'Terminal' })
+vim.keymap.set('i', '<c-t>', '<esc><cmd>exe v:count1 . "ToggleTerm"<cr>', { desc = 'Terminal' })
 vim.api.nvim_create_autocmd('TermOpen', {
   pattern = 'term://*toggleterm#*',
   callback = function()
