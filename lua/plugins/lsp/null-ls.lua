@@ -7,6 +7,7 @@ null_ls.setup {
       extra_args = {
         '--no-semi',
         '--single-quote',
+        '--single-quote-jsx',
         '--single-attribute-per-line'
       }
     },
